@@ -53,12 +53,12 @@ def to_clickable_link(proxy_url: str) -> str:
     return f"https://t.me/proxy?{urlencode(query_pairs)}"
 
 
-def proxy_label(proxy_url: str, index: int) -> str:
+def proxy_target(proxy_url: str) -> str:
     parsed = urlparse(proxy_url)
     params = parse_qs(parsed.query)
     server = params.get("server", ["unknown"])[0]
     port = params.get("port", ["?"])[0]
-    return f"{index:04d}. {server}:{port}"
+    return f"{server}:{port}"
 
 
 def build_markdown(proxies: list[str], source: str) -> str:
@@ -74,7 +74,7 @@ def build_markdown(proxies: list[str], source: str) -> str:
         "",
     ]
     body = [
-        f"- [{proxy_label(proxy, i)}]({to_clickable_link(proxy)})"
+        f"- {i:04d}. [{proxy_target(proxy)}]({to_clickable_link(proxy)})"
         for i, proxy in enumerate(proxies, start=1)
     ]
     return "\n".join(header + body) + "\n"
