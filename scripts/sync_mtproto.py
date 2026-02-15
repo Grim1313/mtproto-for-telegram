@@ -36,9 +36,9 @@ def normalize_lines(raw: str) -> list[str]:
     return lines
 
 
-def to_tg_link(proxy_url: str) -> str:
+def to_clickable_link(proxy_url: str) -> str:
     parsed = urlparse(proxy_url)
-    if parsed.scheme == "tg":
+    if parsed.scheme == "https" and parsed.netloc == "t.me":
         return proxy_url
 
     params = parse_qs(parsed.query)
@@ -50,7 +50,7 @@ def to_tg_link(proxy_url: str) -> str:
     if not query_pairs:
         return proxy_url
 
-    return f"tg://proxy?{urlencode(query_pairs)}"
+    return f"https://t.me/proxy?{urlencode(query_pairs)}"
 
 
 def proxy_label(proxy_url: str, index: int) -> str:
@@ -74,7 +74,7 @@ def build_markdown(proxies: list[str], source: str) -> str:
         "",
     ]
     body = [
-        f"- [{proxy_label(proxy, i)}]({to_tg_link(proxy)})"
+        f"- [{proxy_label(proxy, i)}]({to_clickable_link(proxy)})"
         for i, proxy in enumerate(proxies, start=1)
     ]
     return "\n".join(header + body) + "\n"
