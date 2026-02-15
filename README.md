@@ -1,47 +1,63 @@
-# 🌐 Fresh MTProto Proxies – Auto-updated Every 12 Hours
+# 🌐 MTProto Proxy Fork of SoliSpirit/mtproto
 
-Looking for fresh, working Telegram MTProto proxies?  
-This repository provides an always-up-to-date list of free MTProto proxies that you can use to bypass censorship and connect to Telegram with privacy and speed.
+This repository is a **fork-focused mirror** of the original project [`SoliSpirit/mtproto`](https://github.com/SoliSpirit/mtproto), with one practical goal:
 
-> **✅ Files:** [`all_proxies.txt`](all_proxies.txt) · [`all_proxies.md`](all_proxies.md)  
-> **🕒 Updated:** Automatically every 12 hours from `SoliSpirit/mtproto`
+- keep the original raw proxy feed,
+- and provide a more convenient **clickable Markdown list** for daily use.
 
----
-
-## 📄 What's Inside?
-
-- A simple text file: `all_proxies.txt`
-- Each line contains a working MTProto proxy in standard format
-- No clutter, no ads – just clean proxy addresses ready to use
-
-Example line:
-tg://proxy?server=example.com&port=443&secret=ee00000000000000000000000000000000000000
-
+> **Upstream source:** `SoliSpirit/mtproto`  
+> **Sync interval:** every 12 hours
 
 ---
 
-## 🔄 Auto Update System
+## 📦 What this fork provides
 
-This proxy list is generated and pushed by a bot every **12 hours** using a custom script.  
-The script scans for publicly available proxies and verifies them before publishing.
+This fork keeps **both formats** in sync:
 
----
+- [`all_proxies.txt`](all_proxies.txt) — original plain text list (one proxy per line)
+- [`all_proxies.md`](all_proxies.md) — human-friendly clickable list
 
-## 💡 How to Use MTProto Proxies?
+So you can choose:
 
-1. Copy a line from `all_proxies.txt`
-2. Open it on your phone or desktop browser
-3. Telegram will automatically offer to connect using the proxy
-
-You can also manually paste the proxy link into Telegram's "Data and Storage" settings under "Proxy".
+- **automation / scripts** → use `all_proxies.txt`
+- **manual usage** (phone/desktop) → use `all_proxies.md`
 
 ---
 
-## ☕ Support
+## 🔄 Auto-sync from original project
 
-If you find this useful, consider giving the repo a ⭐️  
+The repository automatically updates from the original upstream list in `SoliSpirit/mtproto` every 12 hours.
+
+Automation is implemented in:
+
+- `scripts/sync_mtproto.py`
+- `.github/workflows/sync-from-solispirit.yml`
+
+---
+
+## 💡 How to use
+
+1. Open [`all_proxies.md`](all_proxies.md)
+2. Click any proxy link
+3. Telegram will open and suggest enabling that proxy
+
+If needed, you can still copy raw links from [`all_proxies.txt`](all_proxies.txt) and add them manually in Telegram settings.
+
+---
+
+## 🔗 Related repositories
+
+- Original project: [`SoliSpirit/mtproto`](https://github.com/SoliSpirit/mtproto)
+- This fork: current repository
+
+---
+
+## ⭐ Support
+
+If this fork is useful, star both repositories:
+
+- this fork
+- original `SoliSpirit/mtproto`
 
 - [English](README.md)
-- [中文](README_CN.md)
 - [Русский](README_RU.md)
-- [فارسی](README_FA.md)
