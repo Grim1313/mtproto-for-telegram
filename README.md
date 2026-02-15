@@ -3,8 +3,8 @@
 Looking for fresh, working Telegram MTProto proxies?  
 This repository provides an always-up-to-date list of free MTProto proxies that you can use to bypass censorship and connect to Telegram with privacy and speed.
 
-> **✅ File:** [`all_proxies.txt`](https://raw.githubusercontent.com/SoliSpirit/mtproto/master/all_proxies.txt)  
-> **🕒 Updated:** Automatically every 12 hours
+> **✅ Files:** [`all_proxies.txt`](all_proxies.txt) · [`all_proxies.md`](all_proxies.md)  
+> **🕒 Updated:** Automatically every 12 hours from `SoliSpirit/mtproto`
 
 ---
 
