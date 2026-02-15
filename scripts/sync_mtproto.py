@@ -74,7 +74,7 @@ def build_markdown(proxies: list[str], source: str) -> str:
         "",
     ]
     body = [
-        f"- {i:04d}. [{proxy_target(proxy)}]({to_clickable_link(proxy)})"
+        f"- {i:04d}\. [{proxy_target(proxy)}]({to_clickable_link(proxy)})"
         for i, proxy in enumerate(proxies, start=1)
     ]
     return "\n".join(header + body) + "\n"
