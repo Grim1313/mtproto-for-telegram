@@ -3,8 +3,8 @@
 寻找新鲜、可用的Telegram MTProto代理？  
 本仓库提供始终更新的免费MTProto代理列表，帮助你绕过审查，以隐私和高速连接Telegram。
 
-> **✅ 文件:** [`all_proxies.txt`](https://raw.githubusercontent.com/SoliSpirit/mtproto/master/all_proxies.txt)  
-> **🕒 更新频率:** 每12小时自动更新
+> **✅ 文件:** [`all_proxies.txt`](all_proxies.txt) · [`all_proxies.md`](all_proxies.md)  
+> **🕒 更新频率:** 每12小时从 `SoliSpirit/mtproto` 自动更新
 
 ---
 
