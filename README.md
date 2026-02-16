@@ -1,4 +1,4 @@
-# 🌐 MTProto Proxy Fork of SoliSpirit/mtproto
+# 🌐 MTProto Telegram Proxy Fork of SoliSpirit/mtproto
 
 This repository is a **fork-focused mirror** of the original project [`SoliSpirit/mtproto`](https://github.com/SoliSpirit/mtproto), with one practical goal:
 
