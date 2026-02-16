@@ -1,4 +1,6 @@
-# 🌐 MTProto Telegram Proxy Fork of SoliSpirit/mtproto
+# 🌐 List of free proxy for Telegram (MTProto)
+
+Auto-updated, auto-verified.
 
 This repository is a **fork-focused mirror** of the original project [`SoliSpirit/mtproto`](https://github.com/SoliSpirit/mtproto), with one practical goal:
 
