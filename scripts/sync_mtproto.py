@@ -6,7 +6,9 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 from pathlib import Path
+from time import sleep
 from urllib.parse import parse_qs, urlencode, urlparse
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 DEFAULT_SOURCE_URL = "https://raw.githubusercontent.com/SoliSpirit/mtproto/master/all_proxies.txt"
@@ -14,10 +16,40 @@ TXT_PATH = Path("all_proxies.txt")
 MD_PATH = Path("all_proxies.md")
 
 
-def fetch_source(url: str, timeout: int) -> str:
-    request = Request(url, headers={"User-Agent": "mtproto-sync-bot/1.0"})
-    with urlopen(request, timeout=timeout) as response:  # nosec: B310 - trusted static source
-        return response.read().decode("utf-8")
+def fetch_source(url: str, timeout: int, max_retries: int, backoff_base: float) -> str:
+    attempt = 0
+    while True:
+        attempt += 1
+        request = Request(url, headers={"User-Agent": "mtproto-sync-bot/1.0"})
+        try:
+            with urlopen(request, timeout=timeout) as response:  # nosec: B310 - trusted static source
+                return response.read().decode("utf-8")
+        except HTTPError as exc:
+            if exc.code == 429 and attempt <= max_retries:
+                retry_after_header = exc.headers.get("Retry-After", "").strip()
+                retry_after: float | None = None
+                if retry_after_header.isdigit():
+                    retry_after = float(retry_after_header)
+
+                backoff_delay = backoff_base * (2 ** (attempt - 1))
+                delay = retry_after if retry_after is not None else backoff_delay
+                print(
+                    f"HTTP 429 from upstream (attempt {attempt}/{max_retries + 1}). "
+                    f"Sleeping {delay:.1f}s before retry."
+                )
+                sleep(delay)
+                continue
+            raise
+        except URLError:
+            if attempt <= max_retries:
+                delay = backoff_base * (2 ** (attempt - 1))
+                print(
+                    f"Network error from upstream (attempt {attempt}/{max_retries + 1}). "
+                    f"Sleeping {delay:.1f}s before retry."
+                )
+                sleep(delay)
+                continue
+            raise
 
 
 def normalize_lines(raw: str) -> list[str]:
@@ -74,7 +106,7 @@ def build_markdown(proxies: list[str], source: str) -> str:
         "",
     ]
     body = [
-        f"- {i:04d}\. [{proxy_target(proxy)}]({to_clickable_link(proxy)})"
+        f"- {i:04d}\\. [{proxy_target(proxy)}]({to_clickable_link(proxy)})"
         for i, proxy in enumerate(proxies, start=1)
     ]
     return "\n".join(header + body) + "\n"
@@ -89,6 +121,13 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--source-url", default=DEFAULT_SOURCE_URL, help="Upstream URL for all_proxies.txt")
     parser.add_argument("--timeout", type=int, default=30, help="HTTP timeout in seconds")
+    parser.add_argument("--max-retries", type=int, default=4, help="Number of retries for transient upstream errors")
+    parser.add_argument(
+        "--backoff-base",
+        type=float,
+        default=1.5,
+        help="Base delay in seconds for exponential backoff between retries",
+    )
     return parser.parse_args()
 
 
@@ -98,7 +137,7 @@ def main() -> None:
     if args.local_only:
         raw = TXT_PATH.read_text(encoding="utf-8")
     else:
-        raw = fetch_source(args.source_url, args.timeout)
+        raw = fetch_source(args.source_url, args.timeout, args.max_retries, args.backoff_base)
 
     proxies = normalize_lines(raw)
 
