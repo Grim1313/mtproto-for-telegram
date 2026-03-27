@@ -35,6 +35,8 @@
 - `scripts/sync_mtproto.py`
 - `.github/workflows/sync-from-solispirit.yml`
 
+> `all_proxies.txt` коммитится только когда его содержимое реально меняется. Если upstream не изменился, GitHub может показывать более старую дату «последнего обновления» этого файла.
+
 ---
 
 ## 💡 Как пользоваться

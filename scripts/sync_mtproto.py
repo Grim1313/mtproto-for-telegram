@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 from datetime import datetime, timezone
 from pathlib import Path
 from time import sleep
@@ -93,13 +94,13 @@ def proxy_target(proxy_url: str) -> str:
     return f"{server}:{port}"
 
 
-def build_markdown(proxies: list[str], source: str) -> str:
-    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+def build_markdown(proxies: list[str], source: str, txt_sha256: str, last_sync: str) -> str:
     header = [
         "# MTProto Proxy Links",
         "",
         f"Source: `{source}`",
-        f"Last sync: {timestamp}",
+        f"Last sync: {last_sync}",
+        f"TXT SHA256: `{txt_sha256}`",
         f"Total proxies: **{len(proxies)}**",
         "",
         "Click any link below to open it directly in Telegram:",
@@ -110,6 +111,17 @@ def build_markdown(proxies: list[str], source: str) -> str:
         for i, proxy in enumerate(proxies, start=1)
     ]
     return "\n".join(header + body) + "\n"
+
+
+def resolve_last_sync_timestamp(previous_md: str | None, txt_changed: bool) -> str:
+    if txt_changed or not previous_md:
+        return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+    for line in previous_md.splitlines():
+        if line.startswith("Last sync: "):
+            return line.removeprefix("Last sync: ").strip()
+
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 
 def parse_args() -> argparse.Namespace:
@@ -140,9 +152,21 @@ def main() -> None:
         raw = fetch_source(args.source_url, args.timeout, args.max_retries, args.backoff_base)
 
     proxies = normalize_lines(raw)
+    normalized_txt = "\n".join(proxies) + "\n"
+    txt_sha256 = hashlib.sha256(normalized_txt.encode("utf-8")).hexdigest()
 
-    TXT_PATH.write_text("\n".join(proxies) + "\n", encoding="utf-8")
-    MD_PATH.write_text(build_markdown(proxies, args.source_url), encoding="utf-8")
+    previous_txt = TXT_PATH.read_text(encoding="utf-8") if TXT_PATH.exists() else None
+    previous_md = MD_PATH.read_text(encoding="utf-8") if MD_PATH.exists() else None
+    txt_changed = previous_txt != normalized_txt
+
+    if txt_changed:
+        TXT_PATH.write_text(normalized_txt, encoding="utf-8")
+
+    last_sync = resolve_last_sync_timestamp(previous_md, txt_changed)
+    rendered_md = build_markdown(proxies, args.source_url, txt_sha256, last_sync)
+
+    if previous_md != rendered_md:
+        MD_PATH.write_text(rendered_md, encoding="utf-8")
 
     print(f"Synced {len(proxies)} proxies")
 
