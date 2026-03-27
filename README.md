@@ -35,6 +35,8 @@ Automation is implemented in:
 - `scripts/sync_mtproto.py`
 - `.github/workflows/sync-from-solispirit.yml`
 
+> `all_proxies.txt` is committed only when its content actually changes. If upstream data is unchanged, GitHub can show an older “last updated” date for this file.
+
 ---
 
 ## 💡 How to use
