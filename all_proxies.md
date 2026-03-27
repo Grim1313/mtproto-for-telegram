@@ -1,7 +1,7 @@
 # MTProto Proxy Links
 
 Source: `https://raw.githubusercontent.com/SoliSpirit/mtproto/master/all_proxies.txt`
-Last sync: 2026-03-26 02:03 UTC
+Last sync: 2026-03-27 02:03 UTC
 Total proxies: **122**
 
 Click any link below to open it directly in Telegram:
