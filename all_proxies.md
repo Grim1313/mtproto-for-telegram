@@ -1,9 +1,9 @@
 # MTProto Proxy Links
 
 Source: `https://raw.githubusercontent.com/SoliSpirit/mtproto/master/all_proxies.txt`
-Last sync: 2026-04-06 02:09 UTC
-TXT SHA256: `de4d71af7c361cab1930d291b9056a85dfab724a8d5dc8eef2618b4c8a846543`
-Total proxies: **115**
+Last sync: 2026-04-06 13:02 UTC
+TXT SHA256: `90bb9e202a35e7736e886d7e0f7fa9f25ad5249c1664fc19d862bc9c2c2d9190`
+Total proxies: **114**
 
 Click any link below to open it directly in Telegram:
 
@@ -94,31 +94,30 @@ Click any link below to open it directly in Telegram:
 - 0085\. [77.72.80.25:9443](https://t.me/proxy?server=77.72.80.25&port=9443&secret=eeNEgYdJvXrFGRMCIMJCdQ)
 - 0086\. [77.72.80.80:9443](https://t.me/proxy?server=77.72.80.80&port=9443&secret=79e344818749bd7ac519130220c25d09)
 - 0087\. [77.72.80.77:9443](https://t.me/proxy?server=77.72.80.77&port=9443&secret=79e344818749bd7ac519130220c25d09)
-- 0088\. [prxygo.shop:443](https://t.me/proxy?server=prxygo.shop&port=443&secret=48181acd22b3edaebc8a447868a7dfcb)
-- 0089\. [2.26.97.0:8443](https://t.me/proxy?server=2.26.97.0&port=8443&secret=f5a96ceadd1bbedd719fbd7f1c9387dd)
-- 0090\. [168.222.254.22:443](https://t.me/proxy?server=168.222.254.22&port=443&secret=9fef5b805123f9e10620fa0e6ece8a0e)
-- 0091\. [77.105.143.25:443](https://t.me/proxy?server=77.105.143.25&port=443&secret=757652b1946c948f1880a09ad95fc238)
-- 0092\. [tg.smartaisupport.ru:443](https://t.me/proxy?server=tg.smartaisupport.ru&port=443&secret=4b3503c268b3d097fe4fb96624cec676)
-- 0093\. [proxytop.space:443](https://t.me/proxy?server=proxytop.space&port=443&secret=7d793037a0760186574b0282f2f435e7)
-- 0094\. [tgproxy2.appav.net:443](https://t.me/proxy?server=tgproxy2.appav.net&port=443&secret=8bf3a57e01e2d2c226113d338840793d)
-- 0095\. [obxod2.vpnforum.ru:443](https://t.me/proxy?server=obxod2.vpnforum.ru&port=443&secret=bf9f2d60e8d4ca1b376a71ea5400c7d2)
-- 0096\. [proxytelega.store:443](https://t.me/proxy?server=proxytelega.store&port=443&secret=5d41402abc4b2a76b9719d911017c592)
-- 0097\. [46.52.232.233:7997](https://t.me/proxy?server=46.52.232.233&port=7997&secret=eefb411605ed6c699374aeb32f4db7b9ed626979736b32322e7275)
-- 0098\. [videolandia.duckdns.org:8443](https://t.me/proxy?server=videolandia.duckdns.org&port=8443&secret=7hty2YFwzNwkAMNb3ksBfSN2aWRlb2xhbmRpYS5kdWNrZG5zLm9yZw)
-- 0099\. [tgobhod.forum:443](https://t.me/proxy?server=tgobhod.forum&port=443&secret=e3b0c44298fc1c149afbf4c8996fb924)
-- 0100\. [free.euthanasia.website:443](https://t.me/proxy?server=free.euthanasia.website&port=443&secret=7iNz/L4bCOGfaoTGHwRyZJh3d3cuY2xvdWRmbGFyZS5jb20)
-- 0101\. [65.109.213.227:65535](https://t.me/proxy?server=65.109.213.227&port=65535&secret=EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
-- 0102\. [65.109.210.202:8443](https://t.me/proxy?server=65.109.210.202&port=8443&secret=EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
-- 0103\. [65.109.210.10:8443](https://t.me/proxy?server=65.109.210.10&port=8443&secret=EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
-- 0104\. [prxyhub.click:443](https://t.me/proxy?server=prxyhub.click&port=443&secret=9f27410725ab8ab84ed17daf14723236)
-- 0105\. [195.254.165.249:25565](https://t.me/proxy?server=195.254.165.249&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-- 0106\. [195.254.165.250:25565](https://t.me/proxy?server=195.254.165.250&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-- 0107\. [195.254.165.251:25565](https://t.me/proxy?server=195.254.165.251&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-- 0108\. [195.254.165.253:25565](https://t.me/proxy?server=195.254.165.253&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-- 0109\. [195.254.165.252:25565](https://t.me/proxy?server=195.254.165.252&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-- 0110\. [195.254.165.247:25565](https://t.me/proxy?server=195.254.165.247&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-- 0111\. [195.254.165.211:4455](https://t.me/proxy?server=195.254.165.211&port=4455&secret=ee1603010200010001fc030386e24c3ad3626973636F7474692E79656B74616E65742E636F6D)
-- 0112\. [195.254.165.23:9443](https://t.me/proxy?server=195.254.165.23&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
-- 0113\. [195.254.165.71:9443](https://t.me/proxy?server=195.254.165.71&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
-- 0114\. [195.254.165.168:9443](https://t.me/proxy?server=195.254.165.168&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
-- 0115\. [195.254.165.233:65535](https://t.me/proxy?server=195.254.165.233&port=65535&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+- 0088\. [tgproxy2.appav.net:443](https://t.me/proxy?server=tgproxy2.appav.net&port=443&secret=8bf3a57e01e2d2c226113d338840793d)
+- 0089\. [obxod2.vpnforum.ru:443](https://t.me/proxy?server=obxod2.vpnforum.ru&port=443&secret=bf9f2d60e8d4ca1b376a71ea5400c7d2)
+- 0090\. [proxytelega.store:443](https://t.me/proxy?server=proxytelega.store&port=443&secret=5d41402abc4b2a76b9719d911017c592)
+- 0091\. [46.52.232.233:7997](https://t.me/proxy?server=46.52.232.233&port=7997&secret=eefb411605ed6c699374aeb32f4db7b9ed626979736b32322e7275)
+- 0092\. [videolandia.duckdns.org:8443](https://t.me/proxy?server=videolandia.duckdns.org&port=8443&secret=7hty2YFwzNwkAMNb3ksBfSN2aWRlb2xhbmRpYS5kdWNrZG5zLm9yZw)
+- 0093\. [tgobhod.forum:443](https://t.me/proxy?server=tgobhod.forum&port=443&secret=e3b0c44298fc1c149afbf4c8996fb924)
+- 0094\. [free.euthanasia.website:443](https://t.me/proxy?server=free.euthanasia.website&port=443&secret=7iNz/L4bCOGfaoTGHwRyZJh3d3cuY2xvdWRmbGFyZS5jb20)
+- 0095\. [65.109.213.227:65535](https://t.me/proxy?server=65.109.213.227&port=65535&secret=EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+- 0096\. [65.109.210.202:8443](https://t.me/proxy?server=65.109.210.202&port=8443&secret=EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+- 0097\. [65.109.210.10:8443](https://t.me/proxy?server=65.109.210.10&port=8443&secret=EERighJJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+- 0098\. [prxyhub.click:443](https://t.me/proxy?server=prxyhub.click&port=443&secret=9f27410725ab8ab84ed17daf14723236)
+- 0099\. [168.222.254.23:443](https://t.me/proxy?server=168.222.254.23&port=443&secret=a6246e1e4dcf0e9167f48431a7cf590a)
+- 0100\. [proxydazhenaparkovke.site:443](https://t.me/proxy?server=proxydazhenaparkovke.site&port=443&secret=dde8aa2e8c1ad50570b7d6fe7e0ba3d677)
+- 0101\. [64.188.64.189:443](https://t.me/proxy?server=64.188.64.189&port=443&secret=b0834f5c52129b3de4fed01625bb8567)
+- 0102\. [av.1.mtproto.ru:443](https://t.me/proxy?server=av.1.mtproto.ru&port=443&secret=7iERIiIzM0REVVVmZnd3iIhicm93c2VyLnlhbmRleC5jb20)
+- 0103\. [cdn.skippnet.com:443](https://t.me/proxy?server=cdn.skippnet.com&port=443&secret=ee0193f50c1645c3631c2b5dea79828fa563646e2e736b6970706e65742e636f6d)
+- 0104\. [195.254.165.249:25565](https://t.me/proxy?server=195.254.165.249&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
+- 0105\. [195.254.165.250:25565](https://t.me/proxy?server=195.254.165.250&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
+- 0106\. [195.254.165.251:25565](https://t.me/proxy?server=195.254.165.251&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
+- 0107\. [195.254.165.253:25565](https://t.me/proxy?server=195.254.165.253&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
+- 0108\. [195.254.165.252:25565](https://t.me/proxy?server=195.254.165.252&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
+- 0109\. [195.254.165.247:25565](https://t.me/proxy?server=195.254.165.247&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
+- 0110\. [195.254.165.211:4455](https://t.me/proxy?server=195.254.165.211&port=4455&secret=ee1603010200010001fc030386e24c3ad3626973636F7474692E79656B74616E65742E636F6D)
+- 0111\. [195.254.165.23:9443](https://t.me/proxy?server=195.254.165.23&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+- 0112\. [195.254.165.71:9443](https://t.me/proxy?server=195.254.165.71&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+- 0113\. [195.254.165.168:9443](https://t.me/proxy?server=195.254.165.168&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+- 0114\. [195.254.165.233:65535](https://t.me/proxy?server=195.254.165.233&port=65535&secret=eeNEgYdJvXrFGRMCIMJdCQ)
