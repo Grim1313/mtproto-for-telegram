@@ -17,7 +17,7 @@ This repository is a **fork-focused mirror** of the original project [`SoliSpiri
 This fork keeps **both formats** in sync:
 
 - [`all_proxies.txt`](all_proxies.txt) — original plain text list (one proxy per line)
-- [`all_proxies.md`](all_proxies.md) — human-friendly clickable list
+- [`all_proxies.md`](all_proxies.md) — human-friendly clickable list with direct `tg://proxy` links
 
 So you can choose:
 
@@ -45,7 +45,14 @@ Automation is implemented in:
 2. Click any proxy link
 3. Telegram will open and suggest enabling that proxy
 
-If needed, you can still copy raw links from [`all_proxies.txt`](all_proxies.txt) and add them manually in Telegram settings.
+The Markdown list uses `tg://proxy?...` links instead of `https://t.me/proxy?...`.
+This avoids relying on the `t.me` domain, which may be blocked in some countries.
+
+Possible caveats:
+
+- `tg://` links require the Telegram app to be installed and registered as the handler for Telegram links.
+- Some browsers, in-app webviews, Markdown viewers, or Git hosting interfaces may ask for confirmation before opening Telegram, or may block custom URL schemes.
+- If clicking a link does not work, copy the proxy data manually from [`all_proxies.txt`](all_proxies.txt) and add it in Telegram settings.
 
 ---
 

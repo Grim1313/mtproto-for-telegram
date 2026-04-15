@@ -71,9 +71,6 @@ def normalize_lines(raw: str) -> list[str]:
 
 def to_clickable_link(proxy_url: str) -> str:
     parsed = urlparse(proxy_url)
-    if parsed.scheme == "https" and parsed.netloc == "t.me":
-        return proxy_url
-
     params = parse_qs(parsed.query)
     query_pairs = []
     for key in ("server", "port", "secret"):
@@ -83,7 +80,7 @@ def to_clickable_link(proxy_url: str) -> str:
     if not query_pairs:
         return proxy_url
 
-    return f"https://t.me/proxy?{urlencode(query_pairs)}"
+    return f"tg://proxy?{urlencode(query_pairs)}"
 
 
 def proxy_target(proxy_url: str) -> str:
