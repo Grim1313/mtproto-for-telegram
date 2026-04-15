@@ -14,15 +14,19 @@ This repository is a **fork-focused mirror** of the original project [`SoliSpiri
 
 ## 📦 What this fork provides
 
-This fork keeps **both formats** in sync:
+This fork keeps **three formats** in sync:
 
 - [`all_proxies.txt`](all_proxies.txt) — original plain text list (one proxy per line)
-- [`all_proxies.md`](all_proxies.md) — human-friendly clickable list with direct `tg://proxy` fallbacks
+- [`all_proxies.md`](all_proxies.md) — human-friendly clickable Markdown list using `t.me` links
+- [`all_proxies.html`](all_proxies.html) — browser page with direct `tg://proxy` buttons
 
 So you can choose:
 
 - **automation / scripts** → use `all_proxies.txt`
-- **manual usage** (phone/desktop) → use `all_proxies.md`
+- **manual usage where `t.me` works** → use `all_proxies.md`
+- **manual usage where `t.me` is blocked** → use the HTML page: [`all_proxies.html`](https://grim1313.github.io/mtproto-for-telegram/all_proxies.html)
+
+> The GitHub Pages link works after Pages is enabled for this repository.
 
 ---
 
@@ -41,18 +45,26 @@ Automation is implemented in:
 
 ## 💡 How to use
 
-1. Open [`all_proxies.md`](all_proxies.md)
-2. Click the server link to open the proxy through `t.me`
-3. If `t.me` is blocked, copy the `direct: tg://proxy?...` value next to the server link and open it locally
+If `t.me` opens in your country:
 
-The Markdown list keeps `https://t.me/proxy?...` as the clickable link because GitHub and some desktop Markdown viewers do not reliably allow clickable custom URL schemes such as `tg://`.
-For countries where `t.me` is blocked, each proxy also includes a copyable direct `tg://proxy?...` fallback.
+1. Open [`all_proxies.md`](all_proxies.md)
+2. Click any proxy link
+3. Telegram will open and suggest enabling that proxy
+
+If `t.me` is blocked:
+
+1. Open the HTML page: [`all_proxies.html`](https://grim1313.github.io/mtproto-for-telegram/all_proxies.html)
+2. Click **Open** next to any proxy to use a direct `tg://proxy?...` link
+3. Use **Copy** if your browser asks you to paste the link manually
+
+The Markdown list uses `https://t.me/proxy?...` links because GitHub and some desktop Markdown viewers do not reliably allow clickable custom URL schemes such as `tg://`.
+The HTML page is intended for direct `tg://proxy?...` links.
 
 Possible caveats:
 
 - `tg://` links require the Telegram app to be installed and registered as the handler for Telegram links.
-- Some browsers, in-app webviews, Markdown viewers, or Git hosting interfaces may ask for confirmation before opening Telegram, or may block custom URL schemes.
-- If both the clickable `t.me` link and the direct `tg://` fallback do not work, copy the proxy data manually from [`all_proxies.txt`](all_proxies.txt) and add it in Telegram settings.
+- Some browsers or in-app webviews may ask for confirmation before opening Telegram, or may block custom URL schemes.
+- If both the HTML page and the Markdown list do not work, copy the proxy data manually from [`all_proxies.txt`](all_proxies.txt) and add it in Telegram settings.
 
 ---
 
