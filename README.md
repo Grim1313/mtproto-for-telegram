@@ -18,15 +18,13 @@ This fork keeps **three formats** in sync:
 
 - [`all_proxies.txt`](all_proxies.txt) — original plain text list (one proxy per line)
 - [`all_proxies.md`](all_proxies.md) — human-friendly clickable Markdown list using `t.me` links
-- [`all_proxies.html`](all_proxies.html) — browser page with direct `tg://proxy` buttons
+- [`all_proxies.html`](https://grim1313.github.io/mtproto-for-telegram/all_proxies.html) — browser page with direct `tg://proxy` buttons
 
 So you can choose:
 
 - **automation / scripts** → use `all_proxies.txt`
 - **manual usage where `t.me` works** → use `all_proxies.md`
 - **manual usage where `t.me` is blocked** → use the HTML page: [`all_proxies.html`](https://grim1313.github.io/mtproto-for-telegram/all_proxies.html)
-
-> The GitHub Pages link works after Pages is enabled for this repository.
 
 ---
 
