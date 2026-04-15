@@ -18,7 +18,7 @@
 
 - [`all_proxies.txt`](all_proxies.txt) — оригинальный «сырой» текст (по одному прокси на строку)
 - [`all_proxies.md`](all_proxies.md) — удобный кликабельный Markdown-список со ссылками `t.me`
-- [`all_proxies.html`](all_proxies.html) — браузерная страница с прямыми кнопками `tg://proxy`
+- [`all_proxies.html`](https://grim1313.github.io/mtproto-for-telegram/all_proxies.html) — браузерная страница с прямыми кнопками `tg://proxy`
 
 Выбор по задаче:
 
@@ -26,7 +26,6 @@
 - для **ручного использования, если `t.me` работает** — `all_proxies.md`
 - для **ручного использования, если `t.me` заблокирован** — HTML-страница: [`all_proxies.html`](https://grim1313.github.io/mtproto-for-telegram/all_proxies.html)
 
-> Ссылка GitHub Pages заработает после включения Pages для этого репозитория.
 
 ---
 
