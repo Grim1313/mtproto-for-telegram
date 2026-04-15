@@ -69,7 +69,7 @@ def normalize_lines(raw: str) -> list[str]:
     return lines
 
 
-def to_clickable_link(proxy_url: str) -> str:
+def proxy_query(proxy_url: str) -> str | None:
     parsed = urlparse(proxy_url)
     params = parse_qs(parsed.query)
     query_pairs = []
@@ -78,9 +78,25 @@ def to_clickable_link(proxy_url: str) -> str:
             query_pairs.append((key, params[key][0]))
 
     if not query_pairs:
+        return None
+
+    return urlencode(query_pairs)
+
+
+def to_clickable_link(proxy_url: str) -> str:
+    query = proxy_query(proxy_url)
+    if query is None:
         return proxy_url
 
-    return f"tg://proxy?{urlencode(query_pairs)}"
+    return f"https://t.me/proxy?{query}"
+
+
+def to_direct_link(proxy_url: str) -> str:
+    query = proxy_query(proxy_url)
+    if query is None:
+        return proxy_url
+
+    return f"tg://proxy?{query}"
 
 
 def proxy_target(proxy_url: str) -> str:
@@ -100,11 +116,11 @@ def build_markdown(proxies: list[str], source: str, txt_sha256: str, last_sync: 
         f"TXT SHA256: `{txt_sha256}`",
         f"Total proxies: **{len(proxies)}**",
         "",
-        "Click any link below to open it directly in Telegram:",
+        "Click the server link to open it through t.me, or copy the direct tg:// link if t.me is blocked:",
         "",
     ]
     body = [
-        f"- {i:04d}\\. [{proxy_target(proxy)}]({to_clickable_link(proxy)})"
+        f"- {i:04d}\\. [{proxy_target(proxy)}]({to_clickable_link(proxy)}) | direct: `{to_direct_link(proxy)}`"
         for i, proxy in enumerate(proxies, start=1)
     ]
     return "\n".join(header + body) + "\n"
