@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Sync list and markdown links
+      - name: Sync generated proxy files
         run: python scripts/sync_mtproto.py
 
       - name: Commit and push if changed
@@ -33,6 +33,6 @@ jobs:
             exit 0
           fi
 
-          git add all_proxies.txt all_proxies.md
+          git add all_proxies.txt all_proxies.md all_proxies.html
           git commit -m "chore: sync proxies from SoliSpirit"
           git push
