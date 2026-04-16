@@ -109,6 +109,17 @@ def proxy_target(proxy_url: str) -> str:
     return f"{server}:{port}"
 
 
+def proxy_secret_mode(proxy_url: str) -> tuple[str, str]:
+    parsed = urlparse(proxy_url)
+    params = parse_qs(parsed.query)
+    secret = params.get("secret", [""])[0].lower()
+    if secret.startswith("ee"):
+        return ("tls", "TLS masquerading")
+    if secret.startswith("dd"):
+        return ("random-padding", "Random padding")
+    return ("unknown", "Unknown")
+
+
 def build_markdown(proxies: list[str], source: str, txt_sha256: str, last_sync: str) -> str:
     header = [
         "# MTProto Proxy Links",
@@ -132,11 +143,13 @@ def build_html(proxies: list[str], source: str, txt_sha256: str, last_sync: str)
     rows = []
     for i, proxy in enumerate(proxies, start=1):
         target = proxy_target(proxy)
+        mode_class, mode_label = proxy_secret_mode(proxy)
         direct_link = to_direct_link(proxy)
         fallback_link = to_clickable_link(proxy)
         rows.append(
             "        <li class=\"proxy-row\">"
             f"<span class=\"proxy-index\">{i:04d}</span>"
+            f"<span class=\"proxy-mode proxy-mode-{mode_class}\" title=\"{escape(mode_label, quote=True)}\" aria-label=\"{escape(mode_label, quote=True)}\"></span>"
             f"<span class=\"proxy-target\">{escape(target)}</span>"
             f"<a class=\"button primary\" href=\"{escape(direct_link, quote=True)}\">Open</a>"
             f"<a class=\"button secondary\" href=\"{escape(fallback_link, quote=True)}\">t.me</a>"
@@ -152,8 +165,8 @@ def build_html(proxies: list[str], source: str, txt_sha256: str, last_sync: str)
         "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
         "  <title>MTProto Proxy Links</title>\n"
         "  <style>\n"
-        "    :root { color-scheme: light dark; --bg: #f6f7f9; --fg: #14161a; --muted: #5c6675; --line: #d8dde5; --primary: #168acd; --primary-fg: #ffffff; --surface: #ffffff; --surface-alt: #eef2f6; }\n"
-        "    @media (prefers-color-scheme: dark) { :root { --bg: #111418; --fg: #f2f4f7; --muted: #a8b0bd; --line: #303743; --primary: #2ea6e6; --primary-fg: #061018; --surface: #181d24; --surface-alt: #222936; } }\n"
+        "    :root { color-scheme: light dark; --bg: #f6f7f9; --fg: #14161a; --muted: #5c6675; --line: #d8dde5; --primary: #168acd; --primary-fg: #ffffff; --surface: #ffffff; --surface-alt: #eef2f6; --mode-tls: #16a34a; --mode-random-padding: #f59e0b; --mode-unknown: #dc2626; }\n"
+        "    @media (prefers-color-scheme: dark) { :root { --bg: #111418; --fg: #f2f4f7; --muted: #a8b0bd; --line: #303743; --primary: #2ea6e6; --primary-fg: #061018; --surface: #181d24; --surface-alt: #222936; --mode-tls: #22c55e; --mode-random-padding: #fbbf24; --mode-unknown: #f87171; } }\n"
         "    * { box-sizing: border-box; }\n"
         "    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif; }\n"
         "    main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 48px; }\n"
@@ -161,22 +174,33 @@ def build_html(proxies: list[str], source: str, txt_sha256: str, last_sync: str)
         "    p { margin: 0 0 16px; color: var(--muted); }\n"
         "    .meta { display: grid; gap: 6px; margin: 18px 0 24px; color: var(--muted); font-size: 14px; }\n"
         "    .meta code { color: var(--fg); overflow-wrap: anywhere; }\n"
+        "    .legend { display: flex; flex-wrap: wrap; gap: 12px 18px; margin: 0 0 20px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }\n"
+        "    .legend-item { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; }\n"
         "    .proxy-list { list-style: none; padding: 0; margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }\n"
-        "    .proxy-row { display: grid; grid-template-columns: 64px minmax(0, 1fr) 88px 80px 80px; gap: 10px; align-items: center; padding: 10px 12px; border-top: 1px solid var(--line); }\n"
+        "    .proxy-row { display: grid; grid-template-columns: 64px 18px minmax(0, 1fr) 88px 80px 80px; gap: 10px; align-items: center; padding: 10px 12px; border-top: 1px solid var(--line); }\n"
         "    .proxy-row:first-child { border-top: 0; }\n"
         "    .proxy-index { color: var(--muted); font-variant-numeric: tabular-nums; }\n"
+        "    .proxy-mode { display: inline-block; width: 12px; height: 12px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.18); }\n"
+        "    .proxy-mode-tls { background: var(--mode-tls); }\n"
+        "    .proxy-mode-random-padding { background: var(--mode-random-padding); }\n"
+        "    .proxy-mode-unknown { background: var(--mode-unknown); }\n"
         "    .proxy-target { min-width: 0; overflow-wrap: anywhere; font-family: ui-monospace, SFMono-Regular, Consolas, \"Liberation Mono\", monospace; }\n"
         "    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; border: 1px solid var(--line); border-radius: 6px; padding: 0 12px; font: inherit; text-decoration: none; cursor: pointer; }\n"
         "    .primary { border-color: var(--primary); background: var(--primary); color: var(--primary-fg); }\n"
         "    .secondary { background: var(--surface-alt); color: var(--fg); }\n"
         "    .button:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }\n"
-        "    @media (max-width: 720px) { main { width: min(100% - 20px, 1120px); padding-top: 20px; } h1 { font-size: 26px; } .proxy-row { grid-template-columns: 54px minmax(0, 1fr); } .button { width: 100%; } .primary { grid-column: 1 / 2; } .secondary { grid-column: auto; } }\n"
+        "    @media (max-width: 720px) { main { width: min(100% - 20px, 1120px); padding-top: 20px; } h1 { font-size: 26px; } .proxy-row { grid-template-columns: 54px 18px minmax(0, 1fr); } .button { width: 100%; } .primary { grid-column: 1 / 2; } .secondary { grid-column: auto; } }\n"
         "  </style>\n"
         "</head>\n"
         "<body>\n"
         "  <main>\n"
         "    <h1>MTProto Proxy Links</h1>\n"
         "    <p>Use Open for a direct tg://proxy link. Use t.me only if direct links are blocked or not registered on this device.</p>\n"
+        "    <div class=\"legend\">\n"
+        "      <span class=\"legend-item\"><span class=\"proxy-mode proxy-mode-tls\" title=\"TLS masquerading\" aria-hidden=\"true\"></span><span><strong>ee</strong> = TLS masquerading</span></span>\n"
+        "      <span class=\"legend-item\"><span class=\"proxy-mode proxy-mode-random-padding\" title=\"Random padding\" aria-hidden=\"true\"></span><span><strong>dd</strong> = Random padding</span></span>\n"
+        "      <span class=\"legend-item\"><span class=\"proxy-mode proxy-mode-unknown\" title=\"Unknown\" aria-hidden=\"true\"></span><span><strong>other</strong> = Unknown</span></span>\n"
+        "    </div>\n"
         "    <div class=\"meta\">\n"
         f"      <div>Source: <code>{escape(source)}</code></div>\n"
         f"      <div>Last sync: {escape(last_sync)}</div>\n"
