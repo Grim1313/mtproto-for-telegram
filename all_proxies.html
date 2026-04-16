@@ -12,6 +12,8 @@
     main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 48px; }
     h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.15; }
     p { margin: 0 0 16px; color: var(--muted); }
+    .header-link { display: inline-flex; align-items: center; margin-left: 10px; color: var(--primary); font-weight: 600; text-decoration: none; white-space: nowrap; }
+    .header-link:hover { text-decoration: underline; }
     .meta { display: grid; gap: 6px; margin: 18px 0 24px; color: var(--muted); font-size: 14px; }
     .meta code { color: var(--fg); overflow-wrap: anywhere; }
     .legend { display: flex; flex-wrap: wrap; gap: 12px 18px; margin: 0 0 20px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
@@ -35,7 +37,7 @@
 <body>
   <main>
     <h1>MTProto Proxy Links</h1>
-    <p>Use Open for a direct tg://proxy link. Use t.me only if direct links are blocked or not registered on this device.</p>
+    <p>Use Open for a direct tg://proxy link. Use t.me only if direct links are blocked or not registered on this device.<a class="header-link" href="https://github.com/Grim1313/mtproto-for-telegram">Repository</a></p>
     <div class="legend">
       <span class="legend-item"><span class="proxy-mode proxy-mode-tls" title="TLS masquerading" aria-hidden="true"></span><span><strong>ee</strong> = TLS masquerading</span></span>
       <span class="legend-item"><span class="proxy-mode proxy-mode-random-padding" title="Random padding" aria-hidden="true"></span><span><strong>dd</strong> = Random padding</span></span>
