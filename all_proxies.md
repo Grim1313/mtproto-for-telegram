@@ -1,8 +1,8 @@
 # MTProto Proxy Links
 
 Source: `https://raw.githubusercontent.com/SoliSpirit/mtproto/master/all_proxies.txt`
-Last sync: 2026-05-02 02:27 UTC
-TXT SHA256: `04c24903229f19c4eaaa07dc9bcf36c9ae63960ba80079529330679c5ffee6ef`
+Last sync: 2026-05-02 13:03 UTC
+TXT SHA256: `1e4478ea5d38021d2ac6f00e0c9a2d2d81bbf3c4358442a52c7091e3e5f95cad`
 Total proxies: **102**
 
 Click any link below to open it directly in Telegram:
@@ -82,19 +82,19 @@ Click any link below to open it directly in Telegram:
 - 0073\. [91.107.166.142:8888](https://t.me/proxy?server=91.107.166.142&port=8888&secret=ddb10c15b9f659ae2b9f1e646c9c7c1f40)
 - 0074\. [proxy.proxymtproto.net:443](https://t.me/proxy?server=proxy.proxymtproto.net&port=443&secret=dd97caa3c6888366f26b12f994f02ecf1a)
 - 0075\. [free-germany.kimt.space:443](https://t.me/proxy?server=free-germany.kimt.space&port=443&secret=ee7b7ef45d40766b5b5f494f801f53af40667265652d6765726d616e792e6b696d742e7370616365)
-- 0076\. [gproxy-sosavpn.duckdns.org:8443](https://t.me/proxy?server=gproxy-sosavpn.duckdns.org&port=8443&secret=bfb77f1c4bf8a5c16eb5a3d93954ce69)
-- 0077\. [178.234.184.253:4443](https://t.me/proxy?server=178.234.184.253&port=4443&secret=ddcbedf2ec3904bc0856b6b7b5a50fcb7d)
-- 0078\. [45.15.129.62:322](https://t.me/proxy?server=45.15.129.62&port=322&secret=7jxWn4gNdE5lUgkqgbRKB253d3cuYW1hem9uLmNvbQ)
-- 0079\. [93.77.161.19:443](https://t.me/proxy?server=93.77.161.19&port=443&secret=36f56fd415017632c3d5af46ec77a518)
-- 0080\. [proxy1.zeleniyslonik.guru:443](https://t.me/proxy?server=proxy1.zeleniyslonik.guru&port=443&secret=eef75e1d0f1eaface44bd3e2339697827770726f7879312e7a656c656e6979736c6f6e696b2e67757275)
-- 0081\. [i-love-cu.top:853](https://t.me/proxy?server=i-love-cu.top&port=853&secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b)
-- 0082\. [192.124.189.91:5228](https://t.me/proxy?server=192.124.189.91&port=5228&secret=eeeef23efc8eeb72f8b96285fabeaa69f56d74616c6b2e676f6f676c652e636f6d)
-- 0083\. [proto.ghostguard.site:8443](https://t.me/proxy?server=proto.ghostguard.site&port=8443&secret=7iTqo3b0DL-c1y2n8GOKLxdwcm90by5naG9zdGd1YXJkLnNpdGU)
-- 0084\. [who-are-you.top:853](https://t.me/proxy?server=who-are-you.top&port=853&secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b)
-- 0085\. [94.159.106.120:443](https://t.me/proxy?server=94.159.106.120&port=443&secret=ee094c74b28fa0195c624b646de6a9f04f7777772e636c6f7564666c6172652e636f6d)
-- 0086\. [m4in-fr4mes-are-comp1ex-but-cut3.top:853](https://t.me/proxy?server=m4in-fr4mes-are-comp1ex-but-cut3.top&port=853&secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b)
-- 0087\. [connect.tproxyru.live:8980](https://t.me/proxy?server=connect.tproxyru.live&port=8980&secret=ee104462821249bd7ac519130220c25d09617669746f2e7275)
-- 0088\. [tproxyru.live.:8980](https://t.me/proxy?server=tproxyru.live.&port=8980&secret=ee104462821249bd7ac519130220c25d09617669746f2e7275)
+- 0076\. [i-love-cu.top:853](https://t.me/proxy?server=i-love-cu.top&port=853&secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b)
+- 0077\. [192.124.189.91:5228](https://t.me/proxy?server=192.124.189.91&port=5228&secret=eeeef23efc8eeb72f8b96285fabeaa69f56d74616c6b2e676f6f676c652e636f6d)
+- 0078\. [proto.ghostguard.site:8443](https://t.me/proxy?server=proto.ghostguard.site&port=8443&secret=7iTqo3b0DL-c1y2n8GOKLxdwcm90by5naG9zdGd1YXJkLnNpdGU)
+- 0079\. [who-are-you.top:853](https://t.me/proxy?server=who-are-you.top&port=853&secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b)
+- 0080\. [94.159.106.120:443](https://t.me/proxy?server=94.159.106.120&port=443&secret=ee094c74b28fa0195c624b646de6a9f04f7777772e636c6f7564666c6172652e636f6d)
+- 0081\. [m4in-fr4mes-are-comp1ex-but-cut3.top:853](https://t.me/proxy?server=m4in-fr4mes-are-comp1ex-but-cut3.top&port=853&secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b)
+- 0082\. [connect.tproxyru.live:8980](https://t.me/proxy?server=connect.tproxyru.live&port=8980&secret=ee104462821249bd7ac519130220c25d09617669746f2e7275)
+- 0083\. [tproxyru.live.:8980](https://t.me/proxy?server=tproxyru.live.&port=8980&secret=ee104462821249bd7ac519130220c25d09617669746f2e7275)
+- 0084\. [89.125.113.11:443](https://t.me/proxy?server=89.125.113.11&port=443&secret=eebcb694130943ff7dcaf08c93b0564ff179616e6465782e7275)
+- 0085\. [89.125.113.10:443](https://t.me/proxy?server=89.125.113.10&port=443&secret=ee700a15adb4cca8106fe1e0ad0dd35ce879616e6465782e7275)
+- 0086\. [89.125.113.15:443](https://t.me/proxy?server=89.125.113.15&port=443&secret=eee2aa8eea0145d9f9807b628705d6ea9379616e6465782e7275)
+- 0087\. [89.125.113.12:443](https://t.me/proxy?server=89.125.113.12&port=443&secret=ee5c435541940799bc8d9d4b591d62ddc179616e6465782e7275)
+- 0088\. [predator-artist.top:853](https://t.me/proxy?server=predator-artist.top&port=853&secret=ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b)
 - 0089\. [195.254.165.249:25565](https://t.me/proxy?server=195.254.165.249&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
 - 0090\. [195.254.165.250:25565](https://t.me/proxy?server=195.254.165.250&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
 - 0091\. [195.254.165.251:25565](https://t.me/proxy?server=195.254.165.251&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
