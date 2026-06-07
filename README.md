@@ -5,7 +5,7 @@ Auto-updated, auto-verified.
 This repository is a **fork-focused mirror** of the original project [`SoliSpirit/mtproto`](https://github.com/SoliSpirit/mtproto), with one practical goal:
 
 - keep the original raw proxy feed,
-- and provide a more convenient **clickable Markdown list** for daily use.
+- and provide a more convenient **clickable Markdown and HTML lists** for daily use.
 
 > **Upstream source:** `SoliSpirit/mtproto`  
 > **Sync interval:** every 12 hours
